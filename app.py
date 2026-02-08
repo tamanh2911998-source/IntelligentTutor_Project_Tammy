@@ -25,7 +25,7 @@ def main():
 
     init_session_state()
 
-    data_path = Path('Advertisement gap-fill.csv')
+    data_path = Path('de_thi.csv')
     df = load_data(data_path)
 
     # Sidebar
