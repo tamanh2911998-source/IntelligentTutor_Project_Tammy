@@ -1,0 +1,6 @@
+id,question,opt_a,opt_b,opt_c,opt_d,correct,error_type
+1,Alex dreams of going on tour - he's just waiting for his big ____ to get his foot in the door.,deal,break,cake,cheese,B,Collocation
+2,An immodest man who is always blowing his own ____.,trumpet,piano,guitar,flute,A,Collocation
+3,"Lina, the ____ album of the new music band will be uploaded next week.",debut,only,best-selling,individual,A,Collocation
+4,"They had a global ____ hit with their album concept about ""The dark side of the Moon"".",top,song,smash,popular,C,Collocation
+5,It's difficult to ____ a living as a freelance musician nowadays.,make,do,get,take,A,Collocation
