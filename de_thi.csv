@@ -1,6 +1,31 @@
-id,question,opt_a,opt_b,opt_c,opt_d,correct,error_type
-1,Alex dreams of going on tour - he's just waiting for his big ____ to get his foot in the door.,deal,break,cake,cheese,B,Collocation
-2,An immodest man who is always blowing his own ____.,trumpet,piano,guitar,flute,A,Collocation
-3,"Lina, the ____ album of the new music band will be uploaded next week.",debut,only,best-selling,individual,A,Collocation
-4,"They had a global ____ hit with their album concept about ""The dark side of the Moon"".",top,song,smash,popular,C,Collocation
-5,It's difficult to ____ a living as a freelance musician nowadays.,make,do,get,take,A,Collocation
+ID,Topic,Question,Option_A,Option_B,Option_C,Option_D,Correct_Answer,Error_Type_Trap
+1.1,Sustainable Campus,"We are (1)___ to announce...",excite,exciting,excitingly,excited,D,Overgeneralization (Ed vs Ing adjectives)
+1.2,Sustainable Campus,"This competition features (2)___",environmental eye-opening projects,eye-opening environmental projects,projects environmental eye-opening,environmental projects eye-opening,B,L1 Interference (Word Order)
+1.3,Sustainable Campus,"The event, (3)___ by the Student Union...",organised,organising,which organised,was organised,A,Tense Inconsistency (Reduced Relative Clause)
+1.4,Sustainable Campus,"learn more (4)___ the sustainable habits",to,for,about,with,C,Collocation Error (Preposition)
+1.5,Sustainable Campus,"agree (5)___ the official rules",follow,following,to follow,to following,C,Overgeneralization (Verb Patterns)
+1.6,Sustainable Campus,"Let’s (6)___ a campaign",run,study,walk,manage,A,Collocation Error (Verb-Noun match)
+2.1,Global Internship,"list of students (1)___ for the IBI",are selected,selecting,selected,who selected,C,Tense Inconsistency (Reduced Relative Clause)
+2.2,Global Internship,"congratulate all of you (2)___ this milestone",to,on,for,with,B,Collocation Error (Preposition)
+2.3,Global Internship,"provides essential (3)___",experience corporate work,corporate experience work,corporate work experience,work experience corporate,C,L1 Interference (Noun Phrase Order)
+2.4,Global Internship,"goal to help (4)___ modern corporate obstacles",help,to help,helping,to helping,B,Overgeneralization (Verb Patterns)
+2.5,Global Internship,"ability to be (5)___ for this internship",qualified,qualifying,quality,qualification,A,Overgeneralization (Word Form)
+2.6,Global Internship,"chance to (6)___ a contribution",do,make,cause,enhance,B,Collocation Error (Make vs Do)
+3.1,Smart Home,"Are you ready (1)___ the potential",to unlock,unlock,unlocking,unlocked,A,Overgeneralization (Verb Patterns)
+3.2,Smart Home,"notably smoother, and (2)___",far more accessible than ever,more far accessible than ever,more accessible than far ever,ever far more accessible than ever,A,L1 Interference (Comparison Structure)
+3.3,Smart Home,"provide you (3)___ the gear",with,to,for,by,A,Collocation Error (Preposition)
+3.4,Smart Home,"efficient devices (4)___ to lower bills",to design,design,design,designed,D,Tense Inconsistency (Passive Participle)
+3.5,Smart Home,"so you can (5)___ with confidence",innovate,innovative,innovation,innovade,A,Overgeneralization (Word Form)
+3.6,Smart Home,"(6)___ the gap between luxury and life",putting,doing,bridging,making,C,Collocation Error (Idiomatic Expression)
+4.1,Underwater,"thought about (1)___ the ocean floor",reach,reaching,to reach,reached,B,Overgeneralization (Gerund after Preposition)
+4.2,Underwater,"incredible trip, (2)___ curiosity...",combine,combining,combined,to combine,B,Tense Inconsistency (Present Participle)
+4.3,Underwater,"Equipped (3)___ the latest sonar",with,to,for,by,A,Collocation Error (Preposition)
+4.4,Underwater,"carefully (4)___ significant steps",made,done,kept,taken,D,Collocation Error (Take steps)
+4.5,Underwater,"with our (5)___ systems",highly innovative and eco-friendly propulsion,innovative and eco-friendly highly propulsion,propulsion of highly innovative and eco-friendly,highly and eco-friendly innovative propulsion,A,L1 Interference (Adjective Order)
+4.6,Underwater,"receive (6)___ training",comprehensible,comprehensive,comprehend,comprehension,B,Collocation Error (Confusing Words)
+5.1,Local Schools,"Our foundation, (1)___ in 1995",was founded,founding,which founded,founded,D,Tense Inconsistency (Reduced Relative Clause)
+5.2,Local Schools,"we offer (2)___ that enable people",various activities volunteering,volunteering activities various,various volunteering activities,volunteering various activities,C,L1 Interference (Noun Phrase Order)
+5.3,Local Schools,"struggle to (3)___ ends meet",make,do,earn,satisfy,A,Collocation Error (Idiom)
+5.4,Local Schools,"We are (4)___ grateful",deep,deeply,depth,depthen,B,Overgeneralization (Word Form)
+5.5,Local Schools,"prepare (5)___ new methods",about,on,to,for,D,Collocation Error (Preposition)
+5.6,Local Schools,"allow (6)___ our reach",expand,expanding,to expanding,to expand,D,Overgeneralization (Verb Patterns)
