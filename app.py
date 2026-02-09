@@ -48,7 +48,7 @@ def main():
 
     # Filter questions
     if df is None or df.empty:
-        st.error('No questions available. Please add advertising_gap-fill.csv to the app folder.')
+        st.error('No questions available. Please add advertisement_gap-fill.csv to the app folder.')
         return
 
     if selected_error and selected_error != 'All' and 'error_type' in df.columns:
