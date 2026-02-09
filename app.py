@@ -11,6 +11,8 @@ if "q_idx" not in st.session_state:
 # Load data with error handling
 try:
     df = pd.read_csv("advertisement_gap-fill.csv")
+    # normalize column names to a safe, consistent format: strip and replace spaces with underscores
+    df.columns = [str(c).strip().replace(' ', '_') for c in df.columns]
 except FileNotFoundError:
     st.error("advertisement_gap-fill.csv file not found. Please ensure the file is in the correct directory.")
     df = None
