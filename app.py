@@ -19,7 +19,7 @@ except FileNotFoundError:
 st.sidebar.title("Study Zone")
 
 # Validate required columns
-required_cols = ["question", "correct_answer"]
+required_cols = ["Question", "Correct_Answer", "Option_A", "Option_B", "Option_C", "Option_D"]
 if df is not None:
     missing_cols = [c for c in required_cols if c not in df.columns]
     if missing_cols:
@@ -27,15 +27,15 @@ if df is not None:
         df = None
 
 if df is not None:
-    # Filtering: prefer 'error_type' if present, otherwise offer a fallback
-    if "error_type" in df.columns:
-        error_types = df["error_type"].dropna().unique().tolist()
+    # Filtering: prefer 'Error_Type' if present, otherwise offer a fallback
+    if "Error_Type" in df.columns:
+        error_types = df["Error_Type"].dropna().unique().tolist()
         error_types = ["All"] + error_types if len(error_types) > 0 else ["All"]
         selected_error_type = st.sidebar.selectbox("Filter by Error Type:", error_types)
         if selected_error_type == "All":
             filtered_df = df.reset_index(drop=True)
         else:
-            filtered_df = df[df["error_type"] == selected_error_type].reset_index(drop=True)
+            filtered_df = df[df["Error_Type"] == selected_error_type].reset_index(drop=True)
     else:
         st.sidebar.warning("Column 'error_type' not found — providing alternate filtering options.")
         cols_for_filter = ["No filter"] + df.columns.tolist()
@@ -67,12 +67,18 @@ if df is not None:
             current_question = filtered_df.iloc[current_idx]
 
             st.subheader(f"Question {current_idx + 1} of {len(filtered_df)}")
-            st.write(current_question.get("question", "(No question text found)."))
+            st.write(current_question.get("Question", "(No question text found)."))
 
-            # Radio buttons for options (A-D)
-            user_choice = st.radio(
+            # Prepare option texts and show them in radio labels
+            opt_a = str(current_question.get("Option_A", "")).strip()
+            opt_b = str(current_question.get("Option_B", "")).strip()
+            opt_c = str(current_question.get("Option_C", "")).strip()
+            opt_d = str(current_question.get("Option_D", "")).strip()
+
+            option_labels = [f"A. {opt_a}", f"B. {opt_b}", f"C. {opt_c}", f"D. {opt_d}"]
+            user_selection = st.radio(
                 "Select your answer:",
-                options=["A", "B", "C", "D"],
+                options=option_labels,
                 key=f"answer_{current_idx}"
             )
 
@@ -80,11 +86,20 @@ if df is not None:
             col1, col2 = st.columns(2)
             with col1:
                 if st.button("Submit Answer", key=f"submit_{current_idx}"):
-                    correct_answer = str(current_question.get("correct_answer", "")).strip()
-                    if user_choice == correct_answer:
+                    # extract letter from selection (e.g., 'A' from 'A. excite')
+                    user_choice = user_selection.split(".", 1)[0].strip().upper() if isinstance(user_selection, str) else ""
+                    correct_answer = str(current_question.get("Correct_Answer", "")).strip().upper()
+                    if user_choice and correct_answer and user_choice == correct_answer:
                         st.success("✓ Correct! Well done!")
                     else:
-                        st.error(f"✗ Wrong! The correct answer is {correct_answer}")
+                        # Show correct option text too
+                        correct_text = {
+                            "A": opt_a,
+                            "B": opt_b,
+                            "C": opt_c,
+                            "D": opt_d,
+                        }.get(correct_answer, "(unknown)")
+                        st.error(f"✗ Wrong! The correct answer is {correct_answer}. {correct_text}")
             with col2:
                 if st.button("Next Question", key=f"next_{current_idx}"):
                     if current_idx < len(filtered_df) - 1:
