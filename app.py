@@ -25,7 +25,7 @@ def main():
 
     init_session_state()
 
-    data_path = Path('de_thi.csv')
+    data_path = Path('Advertisement gap-fill.csv')
     df = load_data(data_path)
 
     # Sidebar
@@ -48,7 +48,7 @@ def main():
 
     # Filter questions
     if df is None or df.empty:
-        st.error('No questions available. Please add Advertisement gap-fill.csv to the app folder.')
+        st.error('No questions available. Please add advertising_gap-fill.csv to the app folder.')
         return
 
     if selected_error and selected_error != 'All' and 'error_type' in df.columns:
