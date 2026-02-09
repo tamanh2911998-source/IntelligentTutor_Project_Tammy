@@ -126,6 +126,13 @@ def home_page():
     - Track progress  
     """)
 
+def diagnostic_page():
+    st.header("🧪 Diagnostic Test")
+
+    if not st.session_state.logged_in:
+        st.warning("👉 Please sign in to access the diagnostic test")
+        return
+
 def practice_page():
     st.header("📝 Practice")
 
