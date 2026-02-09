@@ -1,120 +1,249 @@
 import streamlit as st
 import pandas as pd
+import os
 
-# Set page layout to wide
-st.set_page_config(layout="wide")
+st.set_page_config(page_title="Adaptive Learning App", layout="wide")
 
-# Initialize session state for question index
-if "q_idx" not in st.session_state:
-    st.session_state.q_idx = 0
+# =========================
+# FILE SETUP
+# =========================
+USER_FILE = "users.csv"
 
-# Load data with error handling
-try:
-    df = pd.read_csv("advertisement_gap-fill.csv")
-    # normalize column names to a safe, consistent format: strip and replace spaces with underscores
-    df.columns = [str(c).strip().replace(' ', '_') for c in df.columns]
-except FileNotFoundError:
-    st.error("advertisement_gap-fill.csv file not found. Please ensure the file is in the correct directory.")
-    df = None
+if not os.path.exists(USER_FILE):
+    pd.DataFrame(columns=["student_id","full_name","password"]).to_csv(USER_FILE,index=False)
 
-# Sidebar Navigation
-st.sidebar.title("Study Zone")
 
-# Validate required columns
-required_cols = ["Question", "Correct_Answer", "Option_A", "Option_B", "Option_C", "Option_D"]
-if df is not None:
-    missing_cols = [c for c in required_cols if c not in df.columns]
-    if missing_cols:
-        st.error(f"Missing required column(s) in CSV: {', '.join(missing_cols)}. Please update the CSV.")
-        df = None
+# =========================
+# SESSION STATE
+# =========================
+if "student_id" not in st.session_state:
+    st.session_state.student_id = None
 
-if df is not None:
-    # Filtering: prefer 'Error_Type' if present, otherwise offer a fallback
-    if "Error_Type" in df.columns:
-        error_types = df["Error_Type"].dropna().unique().tolist()
-        error_types = ["All"] + error_types if len(error_types) > 0 else ["All"]
-        selected_error_type = st.sidebar.selectbox("Filter by Error Type:", error_types)
-        if selected_error_type == "All":
-            filtered_df = df.reset_index(drop=True)
+if "full_name" not in st.session_state:
+    st.session_state.full_name = None
+
+if "logged_in" not in st.session_state:
+    st.session_state.logged_in = False
+
+
+# =========================
+# USER FUNCTIONS
+# =========================
+def load_users():
+    return pd.read_csv(USER_FILE)
+
+def save_user(student_id, full_name, password):
+    df = load_users()
+    new_row = pd.DataFrame([[student_id, full_name, password]],
+                           columns=df.columns)
+    df = pd.concat([df,new_row], ignore_index=True)
+    df.to_csv(USER_FILE,index=False)
+
+
+# =========================
+# TOP RIGHT LOGIN BAR
+# =========================
+def top_login_bar():
+
+    col1, col2 = st.columns([4,1])
+
+    with col2:
+
+        # ===== NOT LOGIN =====
+        if not st.session_state.logged_in:
+
+            with st.popover("🔐 Account"):
+
+                tab1, tab2 = st.tabs(["Sign in","Sign up"])
+
+                # -------- SIGN IN --------
+                with tab1:
+                    login_id = st.text_input("Student ID", key="login_id")
+                    login_pw = st.text_input("Password", type="password", key="login_pw")
+
+                    if st.button("Login"):
+                        df = load_users()
+
+                        user = df[(df.student_id == login_id) &
+                                  (df.password == login_pw)]
+
+                        if not user.empty:
+                            st.session_state.logged_in = True
+                            st.session_state.student_id = login_id
+                            st.session_state.full_name = user.iloc[0]["full_name"]
+                            st.rerun()
+                        else:
+                            st.error("Wrong ID or password")
+
+
+                # -------- SIGN UP --------
+                with tab2:
+                    new_id = st.text_input("Student ID", key="signup_id")
+                    new_name = st.text_input("Full name", key="signup_name")
+                    new_pw = st.text_input("Password", type="password", key="signup_pw")
+
+                    if st.button("Create account"):
+
+                        df = load_users()
+
+                        if new_id in df.student_id.values:
+                            st.error("ID already exists")
+
+                        elif new_id and new_name and new_pw:
+                            save_user(new_id,new_name,new_pw)
+                            st.success("Account created!")
+                        else:
+                            st.warning("Fill all fields")
+
+        # ===== LOGIN SUCCESS =====
         else:
-            filtered_df = df[df["Error_Type"] == selected_error_type].reset_index(drop=True)
-    else:
-        st.sidebar.warning("Column 'error_type' not found — providing alternate filtering options.")
-        cols_for_filter = ["No filter"] + df.columns.tolist()
-        pick_col = st.sidebar.selectbox("Pick a column to filter (optional):", cols_for_filter)
-        if pick_col == "No filter":
-            filtered_df = df.reset_index(drop=True)
-        else:
-            vals = df[pick_col].dropna().unique().tolist()
-            vals = ["All"] + vals if len(vals) > 0 else ["All"]
-            selected_val = st.sidebar.selectbox(f"Filter {pick_col} by:", vals)
-            if selected_val == "All":
-                filtered_df = df.reset_index(drop=True)
-            else:
-                filtered_df = df[df[pick_col] == selected_val].reset_index(drop=True)
+            with st.popover(f"👤 {st.session_state.full_name}"):
 
-    # Reset Progress button
-    if st.sidebar.button("Reset Progress"):
-        st.session_state.q_idx = 0
-        st.experimental_rerun()
+                st.write(f"ID: {st.session_state.student_id}")
 
-    # Main Layout - Two columns
-    col_quiz, col_feedback = st.columns([2, 1])
+                if st.button("Logout"):
+                    st.session_state.logged_in = False
+                    st.session_state.student_id = None
+                    st.session_state.full_name = None
+                    st.rerun()
 
-    # Column 1: Quiz Section
-    with col_quiz:
-        if len(filtered_df) > 0:
-            # Get current question index
-            current_idx = min(st.session_state.q_idx, len(filtered_df) - 1)
-            current_question = filtered_df.iloc[current_idx]
 
-            st.subheader(f"Question {current_idx + 1} of {len(filtered_df)}")
-            st.write(current_question.get("Question", "(No question text found)."))
+# =========================
+# HOME PAGE
+# =========================
+def home_page():
 
-            # Prepare option texts and show them in radio labels
-            opt_a = str(current_question.get("Option_A", "")).strip()
-            opt_b = str(current_question.get("Option_B", "")).strip()
-            opt_c = str(current_question.get("Option_C", "")).strip()
-            opt_d = str(current_question.get("Option_D", "")).strip()
+    st.title("🏠 Adaptive English Learning App")
 
-            option_labels = [f"A. {opt_a}", f"B. {opt_b}", f"C. {opt_c}", f"D. {opt_d}"]
-            user_selection = st.radio(
-                "Select your answer:",
-                options=option_labels,
-                key=f"answer_{current_idx}"
-            )
+    if st.session_state.logged_in:
+        st.success(f"Welcome {st.session_state.full_name} 👋")
 
-            # Submit Answer and Next Question buttons with unique keys
-            col1, col2 = st.columns(2)
-            with col1:
-                if st.button("Submit Answer", key=f"submit_{current_idx}"):
-                    # extract letter from selection (e.g., 'A' from 'A. excite')
-                    user_choice = user_selection.split(".", 1)[0].strip().upper() if isinstance(user_selection, str) else ""
-                    correct_answer = str(current_question.get("Correct_Answer", "")).strip().upper()
-                    if user_choice and correct_answer and user_choice == correct_answer:
-                        st.success("✓ Correct! Well done!")
-                    else:
-                        # Show correct option text too
-                        correct_text = {
-                            "A": opt_a,
-                            "B": opt_b,
-                            "C": opt_c,
-                            "D": opt_d,
-                        }.get(correct_answer, "(unknown)")
-                        st.error(f"✗ Wrong! The correct answer is {correct_answer}. {correct_text}")
-            with col2:
-                if st.button("Next Question", key=f"next_{current_idx}"):
-                    if current_idx < len(filtered_df) - 1:
-                        st.session_state.q_idx += 1
-                        st.experimental_rerun()
-                    else:
-                        st.info("You've completed all questions in this category!")
-        else:
-            st.warning("No questions available for the selected filter.")
+    st.write("""
+    You can:
 
-    # Column 2: Feedback Section
-    with col_feedback:
-        st.subheader("Ms. Tammy's Diagnosis")
-        st.info("Waiting for your answer to analyze...")
-else:
-    st.error("Unable to load the application. Please check the data file and required columns.")
+    - Practice reading tasks  
+    - Learn from mistakes  
+    - Explore corpus examples  
+    - Track progress  
+    """)
+
+
+# =========================
+# PRACTICE PAGE
+# =========================
+def practice_page():
+
+    st.header("📝 Practice Tasks")
+
+    if not st.session_state.logged_in:
+        st.warning("Sign in to do exercises")
+        return
+
+    task_type = st.selectbox(
+        "Choose task type",
+        [
+            "Notice completion",
+            "Leaflet/Flyer completion",
+            "Reordering text",
+            "Information gap completion",
+            "Reading comprehension"
+        ]
+    )
+
+    st.info(f"Task interface for {task_type} will appear here")
+
+
+# =========================
+# PROGRESS PAGE
+# =========================
+def progress_page():
+
+    st.header("📊 Learning Progress")
+
+    if not st.session_state.logged_in:
+        st.warning("Sign in to view progress")
+        return
+
+    st.info("Progress analytics will appear here")
+
+
+# =========================
+# REVIEW PAGE
+# =========================
+def review_page():
+
+    st.header("🔁 Review Mistakes")
+
+    if not st.session_state.logged_in:
+        st.warning("Sign in to review mistakes")
+        return
+
+    st.info("Mistake review will appear here")
+
+
+# =========================
+# MAIN APP
+# =========================
+
+top_login_bar()
+
+menu = st.sidebar.radio(
+    "Navigation",
+    [
+        "Home",
+        "Practice",
+        "Progress",
+        "Review Mistakes"
+    ]
+)
+
+if menu == "Home":
+    home_page()
+
+def practice_page():
+
+    st.header("📝 Task Types")
+
+    st.subheader("Choose a task type")
+
+    task_type = st.radio(
+        "",
+        [
+            "📢 Notice completion",
+            "📄 Leaflet/Flyer completion",
+            "🔀 Reordering text",
+            "🧩 Information gap completion",
+            "📘 Reading text 1",
+        ]
+    )
+
+    st.divider()
+
+    # ===== CHECK LOGIN ONLY WHEN START TASK =====
+
+    if not st.session_state.logged_in:
+        st.info("👉 Please sign in to start this task.")
+        return
+
+    # ===== SHOW TASK AFTER LOGIN =====
+
+    if task_type == "📢 Notice completion":
+        notice_task()
+
+    elif task_type == "📄 Leaflet/Flyer completion":
+        leaflet_task()
+
+    elif task_type == "🔀 Reordering text":
+        reorder_task()
+
+    elif task_type == "🧩 Information gap completion":
+        info_gap_task()
+
+    elif task_type == "📘 Reading text 1":
+        reading1_task()
+
+elif menu == "Progress":
+    progress_page()
+
+elif menu == "Review Mistakes":
+    review_page()
