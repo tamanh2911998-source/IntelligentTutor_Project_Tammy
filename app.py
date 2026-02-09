@@ -151,12 +151,10 @@ def practice_page():
 
     st.divider()
 
-    # 🔐 LOGIN ONLY WHEN START TASK
     if not st.session_state.logged_in:
         st.warning("👉 Please sign in to start this task")
         return
 
-    # SHOW TASK
     if task_type == "📢 Notice completion":
         notice_task()
     elif task_type == "📄 Leaflet/Flyer completion":
@@ -189,11 +187,19 @@ top_login_bar()
 
 menu = st.sidebar.radio(
     "Navigation",
-    ["Home", "Practice", "Progress", "Review Mistakes"]
+    [
+        "Home",
+        "Diagnostic Test",
+        "Practice",
+        "Progress",
+        "Review Mistakes",
+    ]
 )
 
 if menu == "Home":
     home_page()
+elif menu == "Diagnostic Test":
+    diagnostic_page()
 elif menu == "Practice":
     practice_page()
 elif menu == "Progress":
