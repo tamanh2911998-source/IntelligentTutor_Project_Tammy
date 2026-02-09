@@ -133,6 +133,8 @@ def diagnostic_page():
         st.warning("👉 Please sign in to access the diagnostic test")
         return
 
+    st.info("Diagnostic test content will be added here.")
+
 def practice_page():
     st.header("📝 Practice")
 
