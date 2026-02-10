@@ -1,0 +1,452 @@
+[
+    {
+        "id": "1.1",
+        "topic": "Sustainable Campus",
+        "question_text": "Dear students of Westford Academy, \nWe are (1) ______ to announce the Sustainable Campus Design Contest! This competition features (2) ______. The event, (3) ______ by the Student Environmental Union, aims to inspire innovation while celebrating the green efforts of our school. The competition will give opportunities to showcase their creative ideas and express their understanding of environmental preservation. Participating in this event will help students learn more (4) ______ the sustainable habits and green technologies of different regions. \nTo join, participants need to agree (5) ______ the official rules provided. The best concepts will be selected to represent the school in the national final, and winners will receive valuable awards. \nLet’s (6) ______ a campaign to encourage every department to submit at least one original proposal. Together, we can make Westford Academy a leader in this vital movement!",
+        "options": [
+            "excite",
+            "exciting",
+            "excitingly",
+            "excited"
+        ],
+        "correct_answer": "excited",
+        "correct_letter": "D",
+        "error_type": "Adjective Form",
+        "error_analysis": {
+            "excite": {
+                "error_type": "Adjective Form"
+            },
+            "exciting": {
+                "error_type": "Adjective Form"
+            },
+            "excitingly": {
+                "error_type": "Adjective Form"
+            }
+        }
+    },
+    {
+        "id": "1.2",
+        "topic": "Sustainable Campus",
+        "question_text": "Dear students of Westford Academy, \nWe are (1) ______ to announce the Sustainable Campus Design Contest! This competition features (2) ______. The event, (3) ______ by the Student Environmental Union, aims to inspire innovation while celebrating the green efforts of our school. The competition will give opportunities to showcase their creative ideas and express their understanding of environmental preservation. Participating in this event will help students learn more (4) ______ the sustainable habits and green technologies of different regions. \nTo join, participants need to agree (5) ______ the official rules provided. The best concepts will be selected to represent the school in the national final, and winners will receive valuable awards. \nLet’s (6) ______ a campaign to encourage every department to submit at least one original proposal. Together, we can make Westford Academy a leader in this vital movement!",
+        "options": [
+            "environmental eye-opening projects",
+            "eye-opening environmental projects",
+            "projects environmental eye-opening",
+            "environmental projects eye-opening"
+        ],
+        "correct_answer": "eye-opening environmental projects",
+        "correct_letter": "B",
+        "error_type": "Word Order ",
+        "error_analysis": {
+            "environmental eye-opening projects": {
+                "error_type": "Word Order "
+            },
+            "projects environmental eye-opening": {
+                "error_type": "Word Order "
+            },
+            "environmental projects eye-opening": {
+                "error_type": "Word Order "
+            }
+        }
+    },
+    {
+        "id": "1.3",
+        "topic": "Sustainable Campus",
+        "question_text": "Dear students of Westford Academy, \nWe are (1) ______ to announce the Sustainable Campus Design Contest! This competition features (2) ______. The event, (3) ______ by the Student Environmental Union, aims to inspire innovation while celebrating the green efforts of our school. The competition will give opportunities to showcase their creative ideas and express their understanding of environmental preservation. Participating in this event will help students learn more (4) ______ the sustainable habits and green technologies of different regions. \nTo join, participants need to agree (5) ______ the official rules provided. The best concepts will be selected to represent the school in the national final, and winners will receive valuable awards. \nLet’s (6) ______ a campaign to encourage every department to submit at least one original proposal. Together, we can make Westford Academy a leader in this vital movement!",
+        "options": [
+            "organised",
+            "organising",
+            "which organised",
+            "was organised"
+        ],
+        "correct_answer": "organised",
+        "correct_letter": "A",
+        "error_type": "Reduced Clause ",
+        "error_analysis": {
+            "organising": {
+                "error_type": "Reduced Clause "
+            },
+            "which organised": {
+                "error_type": "Reduced Clause "
+            },
+            "was organised": {
+                "error_type": "Reduced Clause "
+            }
+        }
+    },
+    {
+        "id": "1.4",
+        "topic": "Sustainable Campus",
+        "question_text": "Dear students of Westford Academy, \nWe are (1) ______ to announce the Sustainable Campus Design Contest! This competition features (2) ______. The event, (3) ______ by the Student Environmental Union, aims to inspire innovation while celebrating the green efforts of our school. The competition will give opportunities to showcase their creative ideas and express their understanding of environmental preservation. Participating in this event will help students learn more (4) ______ the sustainable habits and green technologies of different regions. \nTo join, participants need to agree (5) ______ the official rules provided. The best concepts will be selected to represent the school in the national final, and winners will receive valuable awards. \nLet’s (6) ______ a campaign to encourage every department to submit at least one original proposal. Together, we can make Westford Academy a leader in this vital movement!",
+        "options": [
+            "to",
+            "for",
+            "about",
+            "with"
+        ],
+        "correct_answer": "about",
+        "correct_letter": "C",
+        "error_type": "Collocation",
+        "error_analysis": {
+            "to": {
+                "error_type": "Collocation"
+            },
+            "for": {
+                "error_type": "Collocation"
+            },
+            "with": {
+                "error_type": "Collocation"
+            }
+        }
+    },
+    {
+        "id": "1.5",
+        "topic": "Sustainable Campus",
+        "question_text": "Dear students of Westford Academy, \nWe are (1) ______ to announce the Sustainable Campus Design Contest! This competition features (2) ______. The event, (3) ______ by the Student Environmental Union, aims to inspire innovation while celebrating the green efforts of our school. The competition will give opportunities to showcase their creative ideas and express their understanding of environmental preservation. Participating in this event will help students learn more (4) ______ the sustainable habits and green technologies of different regions. \nTo join, participants need to agree (5) ______ the official rules provided. The best concepts will be selected to represent the school in the national final, and winners will receive valuable awards. \nLet’s (6) ______ a campaign to encourage every department to submit at least one original proposal. Together, we can make Westford Academy a leader in this vital movement!",
+        "options": [
+            "follow",
+            "following",
+            "to follow",
+            "to following"
+        ],
+        "correct_answer": "to follow",
+        "correct_letter": "C",
+        "error_type": "Overgeneralization",
+        "error_analysis": {
+            "follow": {
+                "error_type": "Overgeneralization"
+            },
+            "following": {
+                "error_type": "Overgeneralization"
+            },
+            "to following": {
+                "error_type": "Overgeneralization"
+            }
+        }
+    },
+    {
+        "id": "1.6",
+        "topic": "Sustainable Campus",
+        "question_text": "Dear students of Westford Academy, \nWe are (1) ______ to announce the Sustainable Campus Design Contest! This competition features (2) ______. The event, (3) ______ by the Student Environmental Union, aims to inspire innovation while celebrating the green efforts of our school. The competition will give opportunities to showcase their creative ideas and express their understanding of environmental preservation. Participating in this event will help students learn more (4) ______ the sustainable habits and green technologies of different regions. \nTo join, participants need to agree (5) ______ the official rules provided. The best concepts will be selected to represent the school in the national final, and winners will receive valuable awards. \nLet’s (6) ______ a campaign to encourage every department to submit at least one original proposal. Together, we can make Westford Academy a leader in this vital movement!",
+        "options": [
+            "run",
+            "study",
+            "walk",
+            "manage"
+        ],
+        "correct_answer": "run",
+        "correct_letter": "A",
+        "error_type": "Collocation",
+        "error_analysis": {
+            "study": {
+                "error_type": "Collocation"
+            },
+            "walk": {
+                "error_type": "Collocation"
+            },
+            "manage": {
+                "error_type": "Collocation"
+            }
+        }
+    },
+    {
+        "id": "2.1",
+        "topic": "Global Internship",
+        "question_text": "We are delighted to reveal the list of students (1) ______ for the International Business Internship (IBI) this semester! Your focus and persistence have secured this incredible position for you.\nFirst and foremost, congratulate all of you (2) ______ this major milestone. As IBI interns, you are now part of a scheme that provides essential (3) ______, allowing you to gain expertise while producing tangible results. The chosen roles this year align with IBI’s goal (4) ______ modern corporate and economic obstacles. Your ability to be (5) ______ for this high-level internship reflects your superb preparation, talent, and drive. As interns, you will have the chance to (6) ______ a contribution to vital projects that influence the global market. This is not just a chance to generate progress but also a way to advance personally and professionally.",
+        "options": [
+            "are selected",
+            "selecting",
+            "selected",
+            "who selected"
+        ],
+        "correct_answer": "selected",
+        "correct_letter": "C",
+        "error_type": "Reduced Clause",
+        "error_analysis": {
+            "are selected": {
+                "error_type": "Reduced Clause"
+            },
+            "selecting": {
+                "error_type": "Reduced Clause"
+            },
+            "who selected": {
+                "error_type": "Reduced Clause"
+            }
+        }
+    },
+    {
+        "id": "2.2",
+        "topic": "Global Internship",
+        "question_text": "We are delighted to reveal the list of students (1) ______ for the International Business Internship (IBI) this semester! Your focus and persistence have secured this incredible position for you.\nFirst and foremost, congratulate all of you (2) ______ this major milestone. As IBI interns, you are now part of a scheme that provides essential (3) ______, allowing you to gain expertise while producing tangible results. The chosen roles this year align with IBI’s goal (4) ______ modern corporate and economic obstacles. Your ability to be (5) ______ for this high-level internship reflects your superb preparation, talent, and drive. As interns, you will have the chance to (6) ______ a contribution to vital projects that influence the global market. This is not just a chance to generate progress but also a way to advance personally and professionally.",
+        "options": [
+            "to",
+            "on",
+            "for",
+            "with"
+        ],
+        "correct_answer": "on",
+        "correct_letter": "B",
+        "error_type": "Collocation",
+        "error_analysis": {
+            "to": {
+                "error_type": "Collocation"
+            },
+            "for": {
+                "error_type": "Collocation"
+            },
+            "with": {
+                "error_type": "Collocation"
+            }
+        }
+    },
+    {
+        "id": "2.3",
+        "topic": "Global Internship",
+        "question_text": "We are delighted to reveal the list of students (1) ______ for the International Business Internship (IBI) this semester! Your focus and persistence have secured this incredible position for you.\nFirst and foremost, congratulate all of you (2) ______ this major milestone. As IBI interns, you are now part of a scheme that provides essential (3) ______, allowing you to gain expertise while producing tangible results. The chosen roles this year align with IBI’s goal (4) ______ modern corporate and economic obstacles. Your ability to be (5) ______ for this high-level internship reflects your superb preparation, talent, and drive. As interns, you will have the chance to (6) ______ a contribution to vital projects that influence the global market. This is not just a chance to generate progress but also a way to advance personally and professionally.",
+        "options": [
+            "experience corporate work",
+            "corporate experience work",
+            "corporate work experience",
+            "work experience corporate"
+        ],
+        "correct_answer": "corporate work experience",
+        "correct_letter": "C",
+        "error_type": "Word Order",
+        "error_analysis": {
+            "experience corporate work": {
+                "error_type": "Word Order"
+            },
+            "corporate experience work": {
+                "error_type": "Word Order"
+            },
+            "work experience corporate": {
+                "error_type": "Word Order"
+            }
+        }
+    },
+    {
+        "id": "2.4",
+        "topic": "Global Internship",
+        "question_text": "We are delighted to reveal the list of students (1) ______ for the International Business Internship (IBI) this semester! Your focus and persistence have secured this incredible position for you.\nFirst and foremost, congratulate all of you (2) ______ this major milestone. As IBI interns, you are now part of a scheme that provides essential (3) ______, allowing you to gain expertise while producing tangible results. The chosen roles this year align with IBI’s goal (4) ______ modern corporate and economic obstacles. Your ability to be (5) ______ for this high-level internship reflects your superb preparation, talent, and drive. As interns, you will have the chance to (6) ______ a contribution to vital projects that influence the global market. This is not just a chance to generate progress but also a way to advance personally and professionally.",
+        "options": [
+            "help",
+            "to help",
+            "helping",
+            "to helping"
+        ],
+        "correct_answer": "to help",
+        "correct_letter": "B",
+        "error_type": "Overgeneralization",
+        "error_analysis": {
+            "help": {
+                "error_type": "Overgeneralization"
+            },
+            "helping": {
+                "error_type": "Overgeneralization"
+            },
+            "to helping": {
+                "error_type": "Overgeneralization"
+            }
+        }
+    },
+    {
+        "id": "2.5",
+        "topic": "Global Internship",
+        "question_text": "We are delighted to reveal the list of students (1) ______ for the International Business Internship (IBI) this semester! Your focus and persistence have secured this incredible position for you.\nFirst and foremost, congratulate all of you (2) ______ this major milestone. As IBI interns, you are now part of a scheme that provides essential (3) ______, allowing you to gain expertise while producing tangible results. The chosen roles this year align with IBI’s goal (4) ______ modern corporate and economic obstacles. Your ability to be (5) ______ for this high-level internship reflects your superb preparation, talent, and drive. As interns, you will have the chance to (6) ______ a contribution to vital projects that influence the global market. This is not just a chance to generate progress but also a way to advance personally and professionally.",
+        "options": [
+            "qualified",
+            "qualifying",
+            "quality",
+            "qualification"
+        ],
+        "correct_answer": "qualified",
+        "correct_letter": "A",
+        "error_type": "Word Form ",
+        "error_analysis": {
+            "qualifying": {
+                "error_type": "Word Form "
+            },
+            "quality": {
+                "error_type": "Word Form "
+            },
+            "qualification": {
+                "error_type": "Word Form "
+            }
+        }
+    },
+    {
+        "id": "2.6",
+        "topic": "Global Internship",
+        "question_text": "We are delighted to reveal the list of students (1) ______ for the International Business Internship (IBI) this semester! Your focus and persistence have secured this incredible position for you.\nFirst and foremost, congratulate all of you (2) ______ this major milestone. As IBI interns, you are now part of a scheme that provides essential (3) ______, allowing you to gain expertise while producing tangible results. The chosen roles this year align with IBI’s goal (4) ______ modern corporate and economic obstacles. Your ability to be (5) ______ for this high-level internship reflects your superb preparation, talent, and drive. As interns, you will have the chance to (6) ______ a contribution to vital projects that influence the global market. This is not just a chance to generate progress but also a way to advance personally and professionally.",
+        "options": [
+            "do",
+            "make",
+            "cause",
+            "enhance"
+        ],
+        "correct_answer": "make",
+        "correct_letter": "B",
+        "error_type": "Collocation",
+        "error_analysis": {
+            "do": {
+                "error_type": "Collocation"
+            },
+            "cause": {
+                "error_type": "Collocation"
+            },
+            "enhance": {
+                "error_type": "Collocation"
+            }
+        }
+    },
+    {
+        "id": "3.1",
+        "topic": "Underwater Expeditions",
+        "question_text": "Have you ever thought about (1) ______ the ocean floor and uncovering the secrets of the abyss? \nNow, with DeepBlue Tours, your wish can come true. Our advanced marine exploration program offers an incredible trip, (2) ______ curiosity, comfort, and sophisticated engineering. \nWhy Choose DeepBlue? \n- Modern Submersibles: Equipped (3) ______ the latest sonar, our vessels ensure safety and visibility for all divers. \n- Eco-Protect: Enjoy your rare journey, knowing we've carefully (4) ______ significant steps to minimize our impact on marine life with our (5) ______ systems. \n- Pro Coaching: All guests receive (6) ______ training to prepare for an amazing experience in high-pressure environments.",
+        "options": [
+            "reach",
+            "reaching",
+            "to reach",
+            "reached"
+        ],
+        "correct_answer": "reaching",
+        "correct_letter": "B",
+        "error_type": "Overgeneralization",
+        "error_analysis": {
+            "reach": {
+                "error_type": "Overgeneralization"
+            },
+            "to reach": {
+                "error_type": "Overgeneralization"
+            },
+            "reached": {
+                "error_type": "Overgeneralization"
+            }
+        }
+    },
+    {
+        "id": "3.2",
+        "topic": "Underwater Expeditions",
+        "question_text": "Have you ever thought about (1) ______ the ocean floor and uncovering the secrets of the abyss? \nNow, with DeepBlue Tours, your wish can come true. Our advanced marine exploration program offers an incredible trip, (2) ______ curiosity, comfort, and sophisticated engineering. \nWhy Choose DeepBlue? \n- Modern Submersibles: Equipped (3) ______ the latest sonar, our vessels ensure safety and visibility for all divers. \n- Eco-Protect: Enjoy your rare journey, knowing we've carefully (4) ______ significant steps to minimize our impact on marine life with our (5) ______ systems. \n- Pro Coaching: All guests receive (6) ______ training to prepare for an amazing experience in high-pressure environments.",
+        "options": [
+            "combine",
+            "combining",
+            "combined",
+            "to combine"
+        ],
+        "correct_answer": "combining",
+        "correct_letter": "B",
+        "error_type": "Reduced Clause",
+        "error_analysis": {
+            "combine": {
+                "error_type": "Reduced Clause"
+            },
+            "combined": {
+                "error_type": "Reduced Clause"
+            },
+            "to combine": {
+                "error_type": "Reduced Clause"
+            }
+        }
+    },
+    {
+        "id": "3.3",
+        "topic": "Underwater Expeditions",
+        "question_text": "Have you ever thought about (1) ______ the ocean floor and uncovering the secrets of the abyss? \nNow, with DeepBlue Tours, your wish can come true. Our advanced marine exploration program offers an incredible trip, (2) ______ curiosity, comfort, and sophisticated engineering. \nWhy Choose DeepBlue? \n- Modern Submersibles: Equipped (3) ______ the latest sonar, our vessels ensure safety and visibility for all divers. \n- Eco-Protect: Enjoy your rare journey, knowing we've carefully (4) ______ significant steps to minimize our impact on marine life with our (5) ______ systems. \n- Pro Coaching: All guests receive (6) ______ training to prepare for an amazing experience in high-pressure environments.",
+        "options": [
+            "with",
+            "to",
+            "for",
+            "by"
+        ],
+        "correct_answer": "with",
+        "correct_letter": "A",
+        "error_type": "Collocation",
+        "error_analysis": {
+            "to": {
+                "error_type": "Collocation"
+            },
+            "for": {
+                "error_type": "Collocation"
+            },
+            "by": {
+                "error_type": "Collocation"
+            }
+        }
+    },
+    {
+        "id": "3.4",
+        "topic": "Underwater Expeditions",
+        "question_text": "Have you ever thought about (1) ______ the ocean floor and uncovering the secrets of the abyss? \nNow, with DeepBlue Tours, your wish can come true. Our advanced marine exploration program offers an incredible trip, (2) ______ curiosity, comfort, and sophisticated engineering. \nWhy Choose DeepBlue? \n- Modern Submersibles: Equipped (3) ______ the latest sonar, our vessels ensure safety and visibility for all divers. \n- Eco-Protect: Enjoy your rare journey, knowing we've carefully (4) ______ significant steps to minimize our impact on marine life with our (5) ______ systems. \n- Pro Coaching: All guests receive (6) ______ training to prepare for an amazing experience in high-pressure environments.",
+        "options": [
+            "made",
+            "done",
+            "kept",
+            "taken"
+        ],
+        "correct_answer": "taken",
+        "correct_letter": "D",
+        "error_type": "Collocation",
+        "error_analysis": {
+            "made": {
+                "error_type": "Collocation"
+            },
+            "done": {
+                "error_type": "Collocation"
+            },
+            "kept": {
+                "error_type": "Collocation"
+            }
+        }
+    },
+    {
+        "id": "3.5",
+        "topic": "Underwater Expeditions",
+        "question_text": "Have you ever thought about (1) ______ the ocean floor and uncovering the secrets of the abyss? \nNow, with DeepBlue Tours, your wish can come true. Our advanced marine exploration program offers an incredible trip, (2) ______ curiosity, comfort, and sophisticated engineering. \nWhy Choose DeepBlue? \n- Modern Submersibles: Equipped (3) ______ the latest sonar, our vessels ensure safety and visibility for all divers. \n- Eco-Protect: Enjoy your rare journey, knowing we've carefully (4) ______ significant steps to minimize our impact on marine life with our (5) ______ systems. \n- Pro Coaching: All guests receive (6) ______ training to prepare for an amazing experience in high-pressure environments.",
+        "options": [
+            "highly innovative and eco-friendly propulsion",
+            "innovative and eco-friendly highly propulsion",
+            "propulsion of highly innovative and eco-friendly",
+            "highly and eco-friendly innovative propulsion"
+        ],
+        "correct_answer": "highly innovative and eco-friendly propulsion",
+        "correct_letter": "A",
+        "error_type": "Word Order ",
+        "error_analysis": {
+            "innovative and eco-friendly highly propulsion": {
+                "error_type": "Word Order "
+            },
+            "propulsion of highly innovative and eco-friendly": {
+                "error_type": "Word Order "
+            },
+            "highly and eco-friendly innovative propulsion": {
+                "error_type": "Word Order "
+            }
+        }
+    },
+    {
+        "id": "3.6",
+        "topic": "Underwater Expeditions",
+        "question_text": "Have you ever thought about (1) ______ the ocean floor and uncovering the secrets of the abyss? \nNow, with DeepBlue Tours, your wish can come true. Our advanced marine exploration program offers an incredible trip, (2) ______ curiosity, comfort, and sophisticated engineering. \nWhy Choose DeepBlue? \n- Modern Submersibles: Equipped (3) ______ the latest sonar, our vessels ensure safety and visibility for all divers. \n- Eco-Protect: Enjoy your rare journey, knowing we've carefully (4) ______ significant steps to minimize our impact on marine life with our (5) ______ systems. \n- Pro Coaching: All guests receive (6) ______ training to prepare for an amazing experience in high-pressure environments.",
+        "options": [
+            "comprehensible",
+            "comprehensive",
+            "comprehend",
+            "comprehension"
+        ],
+        "correct_answer": "comprehensive",
+        "correct_letter": "B",
+        "error_type": "Word Form ",
+        "error_analysis": {
+            "comprehensible": {
+                "error_type": "Word Form "
+            },
+            "comprehend": {
+                "error_type": "Word Form "
+            },
+            "comprehension": {
+                "error_type": "Word Form "
+            }
+        }
+    }
+]
