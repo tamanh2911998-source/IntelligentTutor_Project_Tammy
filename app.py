@@ -1,10 +1,6 @@
 import streamlit as st
 import pandas as pd
 import os
-import sys
-
-# Add the current directory to the Python path for module imports
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 # =========================
 # APP CONFIG
@@ -102,9 +98,8 @@ def notice_task():
     st.info("Notice task goes here")
 
 def leaflet_task():
-    from practice.flyer_completion import flyer_completion
     st.subheader("📄 Leaflet / Flyer Completion")
-    flyer_completion()
+    st.info("Leaflet task goes here")
 
 def reorder_task():
     st.subheader("🔀 Reordering Text")
@@ -190,27 +185,24 @@ def review_page():
 # =========================
 top_login_bar()
 
-# Sidebar navigation
-st.sidebar.title("📚 Main Menu")
-main_menu = st.sidebar.radio(
-    "Select Menu",
-    ["Home", "Practice"]
+menu = st.sidebar.radio(
+    "Navigation",
+    [
+        "Home",
+        "Diagnostic Test",
+        "Practice",
+        "Progress",
+        "Review Mistakes",
+    ]
 )
 
-if main_menu == "Home":
+if menu == "Home":
     home_page()
-elif main_menu == "Practice":
-    st.header("📝 Practice")
-    
-    # Nested radio for practice modules
-    practice_menu = st.sidebar.radio(
-        "Select Practice Module",
-        ["Leaflet/Flyer completion"]
-    )
-    
-    st.divider()
-    
-    if practice_menu == "Leaflet/Flyer completion":
-        st.subheader("📄 Leaflet / Flyer Completion")
-        from practice.flyer_completion import flyer_completion
-        flyer_completion()
+elif menu == "Diagnostic Test":
+    diagnostic_page()
+elif menu == "Practice":
+    practice_page()
+elif menu == "Progress":
+    progress_page()
+elif menu == "Review Mistakes":
+    review_page()
