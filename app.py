@@ -19,9 +19,9 @@ if not os.path.exists(USER_FILE):
 # SESSION STATE
 # =========================
 for key, default in {
-    "logged_in": True,  # DEVELOPMENT: Bypass login
-    "student_id": "dev_user",
-    "full_name": "Developer",
+    "logged_in": False,
+    "student_id": None,
+    "full_name": None,
 }.items():
     if key not in st.session_state:
         st.session_state[key] = default
@@ -186,26 +186,24 @@ def review_page():
 # =========================
 top_login_bar()
 
-# Sidebar navigation
-st.sidebar.title("📚 Main Menu")
-main_menu = st.sidebar.radio(
-    "Select Menu",
-    ["Home", "Practice"]
+menu = st.sidebar.radio(
+    "Navigation",
+    [
+        "Home",
+        "Diagnostic Test",
+        "Practice",
+        "Progress",
+        "Review Mistakes",
+    ]
 )
 
-if main_menu == "Home":
+if menu == "Home":
     home_page()
-elif main_menu == "Practice":
-    st.header("📝 Practice")
-    
-    # Nested radio for practice modules
-    practice_menu = st.sidebar.radio(
-        "Select Practice Module",
-        ["Leaflet/Flyer completion"]
-    )
-    
-    st.divider()
-    
-    if practice_menu == "Leaflet/Flyer completion":
-        st.subheader("📄 Leaflet / Flyer Completion")
-        flyer_completion()
+elif menu == "Diagnostic Test":
+    diagnostic_page()
+elif menu == "Practice":
+    practice_page()
+elif menu == "Progress":
+    progress_page()
+elif menu == "Review Mistakes":
+    review_page()
