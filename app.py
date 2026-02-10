@@ -1,6 +1,9 @@
 import streamlit as st
-import pandas as pd
+import sys
 import os
+
+sys.path.append(os.path.dirname(__file__))
+
 from practice.flyer_completion import flyer_completion
 
 # ==========================
