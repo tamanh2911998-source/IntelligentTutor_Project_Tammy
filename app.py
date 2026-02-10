@@ -190,4 +190,4 @@ def progress_page():
         st.warning("Sign in to view progress")
         return
 
-    st.info("Progress
+    st.info("Progress")
