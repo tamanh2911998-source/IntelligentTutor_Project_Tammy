@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import os
+from practice import flyer_completion
 
 # ==========================
 # APP CONFIG
@@ -109,8 +110,7 @@ def notice_task():
     st.info("Notice task goes here")
 
 def leaflet_task():
-    st.subheader("📄 Leaflet / Flyer Completion")
-    st.info("Leaflet task goes here")
+    flyer_completion()
 
 def reorder_task():
     st.subheader("🔀 Reordering Text")
