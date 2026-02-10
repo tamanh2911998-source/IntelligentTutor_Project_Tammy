@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import os
-from practice.flyer import flyer_completion
+from practice.flyer_completion import Leaflet/Flyer completion
 
 # ==========================
 # APP CONFIG
