@@ -22,9 +22,9 @@ if not os.path.exists(USER_FILE):
 # SESSION STATE
 # =========================
 for key, default in {
-    "logged_in": True,  # DEVELOPMENT: Bypass login
-    "student_id": "dev_user",
-    "full_name": "Developer",
+    "logged_in": False,
+    "student_id": None,
+    "full_name": None,
 }.items():
     if key not in st.session_state:
         st.session_state[key] = default
